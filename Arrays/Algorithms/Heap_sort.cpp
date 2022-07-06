@@ -9,7 +9,7 @@ using namespace std;
 // Therefore total time 2*nlog(n) 
 // Therefore Time complexity is nlog(n)
 
-void swap(int &a, int &b) 
+void swap(int &a, int &b)
 {
     int temp = a;
     a=b;
@@ -61,7 +61,13 @@ void deleteheap(int arr[],int n)   //Function to delete elements sequentially gi
                 }
                 j=2*j+2;
             }
+            for(int i=0;i<n;i++)
+            {
+                cout<<arr[i]<<" ";
+            }
+            cout<<endl;
         }
+        cout<<"end"<<endl;
     }
 }
 int main()

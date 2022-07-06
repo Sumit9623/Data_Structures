@@ -1,1 +1,2 @@
-2*j+1
+
+// this is program for heap sort
