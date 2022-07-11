@@ -1,16 +1,10 @@
-// { Driver Code Starts
 #include<bits/stdc++.h>
 using namespace std;
-
-
- // } Driver Code Ends
-// Function to return minimum number of jumps to end of array
-
 class Solution{
   public:
     int minJumps(int arr[], int n)
     {
-        int i=0,flag=0;
+        int i=0,flag=0,pre=0;
         int count=0;
         while(i<n)
         {
@@ -23,23 +17,20 @@ class Solution{
                     if(arr[j]==0)
                     {
                         flag=1;
+                        count++;
                         break;
                     } 
                     j++;
                 }
                 if(flag) break;
+                count++;
                 i=i+arr[i];
-                count++;   
-            }
-            
+                // cout<<"i = "<<i<<"  "<<"arr[i] = "<<arr[i]<<endl;
+            }  
         }
         return count;
     }
 };
-
-
-// { Driver Code Starts.
-
 int main()
 {
     int t;
@@ -56,4 +47,3 @@ int main()
     }
     return 0;
 }
-  // } Driver Code Ends
