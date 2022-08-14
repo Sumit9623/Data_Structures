@@ -11,8 +11,8 @@ class node
     int data;
     node * link;
 };
-// here instread of defining function create node and initialise using constructor;
 
+// here instread of defining function create node and initialise using constructor;
 node * createnode(int data)  // Function to create node of given data
 {
     node * ptr = new node();
